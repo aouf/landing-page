@@ -23,19 +23,9 @@
     }
   }
 
-  &__cta:link,
-  &__cta:visited {
+  &__cta {
     grid-column: 2 / 3;
     grid-row: 4 / 5;
     justify-self: start;
-
-    text-transform: uppercase;
-    font-size: 1.6rem;
-    font-weight: 700;
-    text-decoration: none;
-    color: #fff;
-    background-color: $color-secondary;
-    padding: 1rem 2rem;
-    border-radius: 100px;
   }
 }

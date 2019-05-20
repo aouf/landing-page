@@ -33,9 +33,16 @@ body {
 
 .container {
   display: grid;
+}
 
-  // & > * {
-  //   padding: 3rem;
-  //   font-size: 5rem;
-  // }
+.cta:link,
+.cta:visited {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: $color-secondary;
+  padding: 1rem 2rem;
+  border-radius: 100px;
 }

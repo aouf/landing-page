@@ -1,6 +1,25 @@
 .presentation {
-  display: grid;
   grid-row: 2 / 3;
+  background-color: #5be79b;
 
-  background-color: cornflowerblue;
+  display: grid;
+  grid-template-columns: 1fr 80% 1fr;
+  grid-template-rows: 3rem min-content 2rem min-content 3rem;
+
+  &__image {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  &__text {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+
+    color: $color-primary;
+    font-size: 1.5rem;
+
+    & p:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
 }

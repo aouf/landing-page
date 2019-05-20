@@ -15,6 +15,17 @@ body {
 .container {
   display: grid; }
 
+.cta:link,
+.cta:visited {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: #fd7c66;
+  padding: 1rem 2rem;
+  border-radius: 100px; }
+
 .features {
   display: grid;
   grid-row: 3 / 4;
@@ -40,20 +51,24 @@ body {
       font-size: 2.8rem;
       text-transform: uppercase;
       color: #122b33; }
-  .header__cta:link, .header__cta:visited {
+  .header__cta {
     grid-column: 2 / 3;
     grid-row: 4 / 5;
-    justify-self: start;
-    text-transform: uppercase;
-    font-size: 1.6rem;
-    font-weight: 700;
-    text-decoration: none;
-    color: #fff;
-    background-color: #fd7c66;
-    padding: 1rem 2rem;
-    border-radius: 100px; }
+    justify-self: start; }
 
 .presentation {
-  display: grid;
   grid-row: 2 / 3;
-  background-color: cornflowerblue; }
+  background-color: #5be79b;
+  display: grid;
+  grid-template-columns: 1fr 80% 1fr;
+  grid-template-rows: 3rem min-content 2rem min-content 3rem; }
+  .presentation__image {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3; }
+  .presentation__text {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    color: #122b33;
+    font-size: 1.5rem; }
+    .presentation__text p:not(:last-child) {
+      margin-bottom: 2rem; }
