@@ -1,9 +1,19 @@
-// COLOR VARIABLES
+// COLORS
 $color-primary: #122b33;
+$color-secondary: #fd7c66;
+$color-tertiary: #5be79b;
 
-// FONT VARIABLES
+// FONTS
 $font-primary: "Montserrat", sans-serif;
 
+// SCREEN WIDTHS
+$bp-largest: 85em; // 1200px + (2 * 80px) / 16px = 85em
+$bp-large: 68.75em; // 1100px / 16px = 68.25em
+$bp-medium: 56.25em; // 900px / 16px = 56.25em
+$bp-small: 37.5em; // 600px / 16px = 37.5em
+$bp-smallest: 31.25em; // 500px / 16px = 31.25em
+
+// BASE CSS
 *,
 *::before,
 *::after {
@@ -23,4 +33,9 @@ body {
 
 .container {
   display: grid;
+
+  // & > * {
+  //   padding: 3rem;
+  //   font-size: 5rem;
+  // }
 }

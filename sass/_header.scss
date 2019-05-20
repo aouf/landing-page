@@ -1,0 +1,41 @@
+.header {
+  grid-row: 1 / 2;
+
+  display: grid;
+  grid-template-columns: 1fr 80% 1fr;
+  grid-template-rows: 3rem min-content 1rem min-content 3rem;
+
+  &__heading {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    display: grid;
+    justify-content: start;
+    grid-row-gap: 1rem;
+
+    &--logo {
+    }
+
+    &--subtext {
+      font-size: 2.8rem;
+      text-transform: uppercase;
+      color: $color-primary;
+    }
+  }
+
+  &__cta:link,
+  &__cta:visited {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    justify-self: start;
+
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    background-color: $color-secondary;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+  }
+}
