@@ -7,7 +7,7 @@ $color-tertiary: #5be79b;
 $font-primary: "Montserrat", sans-serif;
 
 // SCREEN WIDTHS
-$bp-largest: 85em; // 1200px + (2 * 80px) / 16px = 85em
+$bp-largest: 75em; // 1200px / 16px = 75em
 $bp-large: 68.75em; // 1100px / 16px = 68.25em
 $bp-medium: 56.25em; // 900px / 16px = 56.25em
 $bp-small: 37.5em; // 600px / 16px = 37.5em
@@ -35,6 +35,7 @@ body {
   display: grid;
 }
 
+// CTA
 .cta:link,
 .cta:visited {
   font-size: 1.6rem;
@@ -45,4 +46,14 @@ body {
   background-color: $color-secondary;
   padding: 1rem 2rem;
   border-radius: 100px;
+}
+
+// Paragraph
+.paragraph {
+  color: $color-primary;
+  font-size: 1.5rem;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
 }

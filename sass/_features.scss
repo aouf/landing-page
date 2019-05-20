@@ -1,6 +1,50 @@
 .features {
-  display: grid;
   grid-row: 3 / 4;
+  background-color: $color-primary;
+  padding: 3rem 10%;
 
-  background-color: darkgoldenrod;
+  display: grid;
+  grid-gap: 5rem;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: min-content;
+    grid-gap: 4rem;
+  }
+
+  &__examples {
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+
+    display: grid;
+    grid-gap: 1rem;
+
+    &--intro {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+}
+
+.feature {
+  display: grid;
+  grid-gap: 0.8rem;
+  justify-items: center;
+
+  &__icon {
+    height: 8rem;
+    width: 8rem;
+
+    background-color: #fff;
+    border-radius: 50%;
+    fill: $color-primary;
+  }
+
+  &__description {
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+  }
 }

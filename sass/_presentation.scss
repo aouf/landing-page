@@ -14,12 +14,5 @@
   &__text {
     grid-column: 2 / 3;
     grid-row: 4 / 5;
-
-    color: $color-primary;
-    font-size: 1.5rem;
-
-    & p:not(:last-child) {
-      margin-bottom: 2rem;
-    }
   }
 }
