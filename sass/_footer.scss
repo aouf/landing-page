@@ -1,6 +1,22 @@
 .footer {
-  display: grid;
   grid-row: 4 / 5;
+  background-color: $color-secondary;
+  padding: 3rem 10%;
 
-  background-color: darkmagenta;
+  display: grid;
+  grid-template-rows: min-content min-content;
+  grid-template-columns: 7.7rem 1fr;
+  grid-row-gap: 1rem;
+  grid-column-gap: 2rem;
+
+  &__logo {
+    grid-row: 1 / 3;
+    align-self: center;
+  }
+
+  &__link {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
 }
