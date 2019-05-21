@@ -49,19 +49,11 @@ body {
 
   @media only screen and (min-width: $bp-medium) {
     font-size: 1.8rem;
+    padding: 1.125rem 2.25rem;
   }
 
   @media only screen and (min-width: $bp-largest) {
     font-size: 2rem;
-  }
-}
-
-// Paragraph
-.paragraph {
-  color: $color-primary;
-  font-size: 1.5rem;
-
-  &:not(:last-child) {
-    margin-bottom: 2rem;
+    padding: 1.25rem 2.5rem;
   }
 }

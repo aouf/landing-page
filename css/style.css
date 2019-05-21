@@ -28,17 +28,25 @@ body {
   @media only screen and (min-width: 56.25em) {
     .cta:link,
     .cta:visited {
-      font-size: 1.8rem; } }
+      font-size: 1.8rem;
+      padding: 1.125rem 2.25rem; } }
   @media only screen and (min-width: 75em) {
     .cta:link,
     .cta:visited {
-      font-size: 2rem; } }
+      font-size: 2rem;
+      padding: 1.25rem 2.5rem; } }
 
 .paragraph {
   color: #122b33;
   font-size: 1.5rem; }
   .paragraph:not(:last-child) {
-    margin-bottom: 2rem; }
+    margin-bottom: 1rem; }
+  @media only screen and (min-width: 56.25em) {
+    .paragraph {
+      font-size: 1.6875rem; } }
+  @media only screen and (min-width: 56.25em) {
+    .paragraph {
+      font-size: 1.875rem; } }
 
 .features {
   grid-row: 3 / 4;
@@ -100,10 +108,12 @@ body {
   grid-template-rows: 3rem min-content 1rem min-content 3rem; }
   @media only screen and (min-width: 56.25em) {
     .header {
-      grid-template-columns: 1fr min-content minmax(min-content, 28rem) 1fr; } }
+      grid-template-columns: 1fr min-content minmax(min-content, 28rem) 1fr;
+      grid-template-rows: 3.375rem min-content 1rem min-content 3.375rem; } }
   @media only screen and (min-width: 75em) {
     .header {
-      grid-template-columns: 1fr min-content minmax(min-content, 31rem) 1fr; } }
+      grid-template-columns: 1fr min-content minmax(min-content, 31rem) 1fr;
+      grid-template-rows: 3.75rem min-content 1rem min-content 3.75rem; } }
   .header__preview {
     display: none;
     grid-column: 2 / 3;
@@ -159,11 +169,33 @@ body {
   grid-row: 2 / 3;
   background-color: #5be79b;
   display: grid;
-  grid-template-columns: 1fr 80% 1fr;
-  grid-template-rows: 3rem min-content 2rem min-content 3rem; }
+  grid-template-columns: 1fr 45% 35% 1fr;
+  grid-template-rows: 3rem min-content 2rem min-content 3rem;
+  grid-column-gap: 1rem;
+  align-items: center; }
+  @media only screen and (min-width: 56.25em) {
+    .presentation {
+      grid-template-rows: 3.375rem min-content 2rem min-content 3.375rem; } }
+  @media only screen and (min-width: 75em) {
+    .presentation {
+      grid-template-rows: 3.75rem min-content 2rem min-content 3.75rem; } }
   .presentation__image {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3; }
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    width: 25rem;
+    justify-self: center; }
+    @media only screen and (min-width: 56.25em) {
+      .presentation__image {
+        grid-column: 3 / 4;
+        grid-row: 2 / 5;
+        width: 28.125rem; } }
+    @media only screen and (min-width: 75em) {
+      .presentation__image {
+        width: 31.25rem; } }
   .presentation__text {
-    grid-column: 2 / 3;
+    grid-column: 2 / 4;
     grid-row: 4 / 5; }
+    @media only screen and (min-width: 56.25em) {
+      .presentation__text {
+        grid-column: 2 / 3;
+        grid-row: 2 / 5; } }

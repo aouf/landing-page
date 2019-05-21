@@ -7,23 +7,26 @@
 
   @media only screen and (min-width: $bp-medium) {
     grid-template-columns: 1fr min-content minmax(min-content, 28rem) 1fr;
+    grid-template-rows: 3.375rem min-content 1rem min-content 3.375rem;
   }
 
   @media only screen and (min-width: $bp-largest) {
     grid-template-columns: 1fr min-content minmax(min-content, 31rem) 1fr;
+    grid-template-rows: 3.75rem min-content 1rem min-content 3.75rem;
   }
 
   &__preview {
+    // L'aperçu de l'application est caché sur mobile uniquement
     display: none;
-
-    @media only screen and (min-width: $bp-smallest) {
-      display: block;
-    }
 
     grid-column: 2 / 3;
     grid-row: 2 / 5;
 
     width: 21rem;
+
+    @media only screen and (min-width: $bp-smallest) {
+      display: block;
+    }
 
     @media only screen and (min-width: $bp-medium) {
       width: 23.625rem;
