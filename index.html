@@ -15,6 +15,13 @@
   </head>
   <body class="container">
     <header class="header">
+      <img
+        src=""
+        data-src="img/preview.png"
+        alt="Aperçu de l'application"
+        class="header__preview"
+        id="app-preview"
+      />
       <h1 class="header__heading">
         <img src="img/logo.png" alt="Aouf" class="header__heading--logo" />
         <span class="header__heading--subtext">
@@ -101,5 +108,16 @@
       <a href="#" class="footer__link">Mentions légales</a>
       <a href="#" class="footer__link">Conditions générales d'utilisation</a>
     </footer>
+
+    <script>
+      const appPreview = document.getElementById("app-preview");
+      function loadPreview() {
+        if (window.innerWidth > 500) {
+          appPreview.setAttribute("src", appPreview.getAttribute("data-src"));
+        }
+      }
+      window.onload = loadPreview;
+      window.onresize = loadPreview;
+    </script>
   </body>
 </html>
