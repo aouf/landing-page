@@ -15,13 +15,42 @@
   </head>
   <body class="container">
     <header class="header">
-      <img
-        src=""
-        data-src="img/preview.png"
+      <picture class="header__preview">
+        <source
+          srcset="img/preview-large-1x.png 1x"
+          media="(min-width: 112.5em)"
+        />
+        <source
+          srcset="img/preview-medium-1x.png 1x"
+          media="(min-width: 56.25em)"
+        />
+        <img
+          srcset=""
+          data-srcset="img/preview-small-1x.png 1x, img/preview-small-2x.png 2x"
+          src=""
+          data-src="img/preview-small-2x.png"
+          alt="Aperçu de l'application"
+          id="app-preview"
+        />
+      </picture>
+
+      <!--
+        srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+        sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+      -->
+
+      <!-- <img
+        srcset="
+          img/preview-small-1x.png  210w,
+          img/preview-medium-1x.png 236w,
+          img/preview-large-1x.png  263w
+        "
+        sizes="(min-width: 112.5em) 15vw, (min-width: 56.25em) 26vw, (min-width: 31.25em) 42vw"
         alt="Aperçu de l'application"
         class="header__preview"
-        id="app-preview"
-      />
+        src="img/preview-small-1x.png"
+      /> -->
+
       <h1 class="header__heading">
         <img src="img/logo.png" alt="Aouf" class="header__heading--logo" />
         <span class="header__heading--subtext">
@@ -111,13 +140,19 @@
 
     <script>
       const appPreview = document.getElementById("app-preview");
+      let previewIsLoaded = false;
       function loadPreview() {
         if (window.innerWidth > 500) {
+          appPreview.setAttribute(
+            "srcset",
+            appPreview.getAttribute("data-srcset")
+          );
           appPreview.setAttribute("src", appPreview.getAttribute("data-src"));
+          previewIsLoaded = true;
         }
       }
       window.onload = loadPreview;
-      window.onresize = loadPreview;
+      window.onresize = previewIsLoaded ? null : loadPreview;
     </script>
   </body>
 </html>

@@ -1,35 +1,65 @@
 .features {
   grid-row: 3 / 4;
   background-color: $color-primary;
-  padding: 3rem 10%;
+  padding: 4rem 10%;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 5rem;
+  align-items: center;
+
+  @media only screen and (min-width: $bp-medium) {
+    padding: 4.5rem 10%;
+    grid-gap: 5.625rem;
+  }
+
+  @media only screen and (min-width: $bp-largest) {
+    padding: 5rem 10%;
+    grid-gap: 6.25rem;
+  }
 
   &__list {
     grid-column: 1 / 3;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
-    grid-auto-rows: min-content;
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 4rem;
 
-    @media only screen and (min-width: $bp-small) {
+    @media only screen and (min-width: $bp-smallest) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media only screen and (min-width: $bp-medium) {
       grid-column: 1 / 2;
+      grid-gap: 4.5rem;
+    }
+
+    @media only screen and (min-width: $bp-largest) {
+      grid-gap: 5rem;
     }
   }
 
   &__examples {
+    grid-column: 1 / 3;
+
     color: #fff;
     font-size: 1.5rem;
     text-align: center;
+    list-style-position: inside;
 
     display: grid;
-    grid-gap: 1rem;
+    grid-auto-rows: min-content;
+    grid-row-gap: 1rem;
 
-    @media only screen and (min-width: $bp-small) {
+    @media only screen and (min-width: $bp-medium) {
       grid-column: 2 / 3;
+      font-size: 1.6875rem;
+      text-align: start;
+      grid-row-gap: 3rem;
+    }
+
+    @media only screen and (min-width: $bp-largest) {
+      font-size: 1.875rem;
     }
 
     &--intro {
@@ -44,6 +74,14 @@
   grid-gap: 0.8rem;
   justify-items: center;
 
+  @media only screen and (min-width: $bp-medium) {
+    grid-gap: 0.9rem;
+  }
+
+  @media only screen and (min-width: $bp-largest) {
+    grid-gap: 1rem;
+  }
+
   &__icon {
     height: 8rem;
     width: 8rem;
@@ -51,11 +89,29 @@
     background-color: #fff;
     border-radius: 50%;
     fill: $color-primary;
+
+    @media only screen and (min-width: $bp-medium) {
+      height: 9rem;
+      width: 9rem;
+    }
+
+    @media only screen and (min-width: $bp-largest) {
+      height: 10rem;
+      width: 10rem;
+    }
   }
 
   &__description {
     color: #fff;
     font-size: 1.5rem;
     text-align: center;
+
+    @media only screen and (min-width: $bp-medium) {
+      font-size: 1.6875rem;
+    }
+
+    @media only screen and (min-width: $bp-largest) {
+      font-size: 1.875rem;
+    }
   }
 }
