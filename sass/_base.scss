@@ -6,10 +6,27 @@ $color-tertiary: #5be79b;
 // FONTS
 $font-primary: "Montserrat", sans-serif;
 
-// LARGEURS D'ÉCRAN
-$bp-largest: 112.5em; // 1800px / 16px = 112.5em
-$bp-medium: 56.25em; // 900px / 16px = 56.25em
-$bp-smallest: 31.25em; // 500px / 16px = 31.25em
+// MIXINS
+@mixin min-width($breakpoint) {
+  // 500px / 16px = 31.25em
+  @if $breakpoint == small {
+    @media only screen and (min-width: 31.25em) {
+      @content;
+    }
+  }
+  // 900px / 16px = 56.25em
+  @if $breakpoint == medium {
+    @media only screen and (min-width: 56.25em) {
+      @content;
+    }
+  }
+  // 1800px / 16px = 112.5em
+  @if $breakpoint == large {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
 
 // BASE CSS
 *,
@@ -44,13 +61,24 @@ body {
   background-color: $color-secondary;
   padding: 1rem 2rem;
   border-radius: 100px;
+  transition: all 0.2s;
 
-  @media only screen and (min-width: $bp-medium) {
+  &:hover {
+    box-shadow: 0 1rem 2rem rgba(#000, 0.15);
+    transform: translateY(-0.2rem);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba(#000, 0.15);
+    transform: translateY(0);
+  }
+
+  @include min-width(medium) {
     font-size: 1.8rem;
     padding: 1.125rem 2.25rem;
   }
 
-  @media only screen and (min-width: $bp-largest) {
+  @include min-width(large) {
     font-size: 2rem;
     padding: 1.25rem 2.5rem;
   }

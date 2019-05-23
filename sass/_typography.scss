@@ -8,12 +8,12 @@
     margin-bottom: 1rem;
   }
 
-  @media only screen and (min-width: $bp-medium) {
+  @include min-width(medium) {
     font-size: 1.6875rem;
     line-height: 2.34rem;
   }
 
-  @media only screen and (min-width: $bp-largest) {
+  @include min-width(large) {
     font-size: 1.875rem;
     line-height: 2.6rem;
   }

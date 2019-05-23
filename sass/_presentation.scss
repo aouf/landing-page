@@ -8,11 +8,11 @@
   grid-column-gap: 1rem;
   align-items: center;
 
-  @media only screen and (min-width: $bp-medium) {
+  @include min-width(medium) {
     grid-template-rows: 3.375rem min-content 2rem min-content 3.375rem;
   }
 
-  @media only screen and (min-width: $bp-largest) {
+  @include min-width(large) {
     grid-template-rows: 3.75rem min-content 2rem min-content 3.75rem;
   }
 
@@ -22,13 +22,13 @@
     width: 25rem;
     justify-self: center;
 
-    @media only screen and (min-width: $bp-medium) {
+    @include min-width(medium) {
       grid-column: 3 / 4;
       grid-row: 2 / 5;
       width: 28.125rem;
     }
 
-    @media only screen and (min-width: $bp-largest) {
+    @include min-width(large) {
       width: 31.25rem;
     }
   }
@@ -37,7 +37,7 @@
     grid-column: 2 / 4;
     grid-row: 4 / 5;
 
-    @media only screen and (min-width: $bp-medium) {
+    @include min-width(medium) {
       grid-column: 2 / 3;
       grid-row: 2 / 5;
     }

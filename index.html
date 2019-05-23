@@ -28,7 +28,7 @@
           srcset=""
           data-srcset="img/preview-small-1x.png 1x, img/preview-small-2x.png 2x"
           src=""
-          data-src="img/preview-small-2x.png"
+          data-src="img/preview-small-1x.png"
           alt="Aperçu de l'application"
           id="app-preview"
         />
@@ -47,7 +47,21 @@
       /> -->
 
       <h1 class="header__heading">
-        <img src="img/logo.png" alt="Aouf" class="header__heading--logo" />
+        <picture class="header__heading--logo">
+          <source
+            srcset="img/logo-large-1x.png 1x"
+            media="(min-width: 112.5em)"
+          />
+          <source
+            srcset="img/logo-medium-1x.png 1x"
+            media="(min-width: 56.25em)"
+          />
+          <img
+            srcset="img/logo-small-1x.png 1x"
+            src="img/logo-small-1x.png"
+            alt="Aouf"
+          />
+        </picture>
         <span class="header__heading--subtext">
           La plateforme d'engagement solidaire
         </span>
@@ -56,11 +70,22 @@
     </header>
 
     <section class="presentation">
-      <img
-        src="img/illustration.png"
-        alt="La communauté Aouf"
-        class="presentation__image"
-      />
+      <picture class="presentation__image">
+        <source
+          srcset="img/illustration-large-1x.png 1x"
+          media="(min-width: 112.5em)"
+        />
+        <source
+          srcset="img/illustration-medium-1x.png 1x"
+          media="(min-width: 56.25em)"
+        />
+        <img
+          srcset="img/illustration-small-1x.png 1x"
+          src="img/illustration-small-1x.png"
+          alt="La communauté Aouf"
+        />
+      </picture>
+
       <div class="presentation__text">
         <p class="paragraph">
           <strong>AOUF</strong> est une plateforme d'entraide citoyenne née en
@@ -137,7 +162,7 @@
       const appPreview = document.getElementById("app-preview");
       let previewIsLoaded = false;
       function loadPreview() {
-        if (window.innerWidth > 500) {
+        if (window.innerWidth >= 500) {
           appPreview.setAttribute(
             "srcset",
             appPreview.getAttribute("data-srcset")
