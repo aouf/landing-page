@@ -5,16 +5,6 @@
   grid-template-columns: 1fr min-content minmax(min-content, 25rem) 1fr;
   grid-template-rows: 3rem min-content 1rem min-content 3rem;
 
-  @include min-width(medium) {
-    grid-template-columns: 1fr min-content minmax(min-content, 28rem) 1fr;
-    grid-template-rows: 3.375rem min-content 1rem min-content 3.375rem;
-  }
-
-  @include min-width(large) {
-    grid-template-columns: 1fr min-content minmax(min-content, 31rem) 1fr;
-    grid-template-rows: 3.75rem min-content 1rem min-content 3.75rem;
-  }
-
   &__preview {
     // L'aperçu de l'application est caché sur mobile uniquement
     display: none;
@@ -27,14 +17,6 @@
     @include min-width(small) {
       display: block;
     }
-
-    @include min-width(medium) {
-      width: 23.625rem;
-    }
-
-    @include min-width(large) {
-      width: 26.25rem;
-    }
   }
 
   &__heading {
@@ -46,38 +28,14 @@
     grid-row-gap: 1rem;
     align-self: end;
 
-    @include min-width(medium) {
-      grid-template-columns: minmax(min-content, 28rem);
-    }
-
-    @include min-width(large) {
-      grid-template-columns: minmax(min-content, 31rem);
-    }
-
     &--logo {
       width: 16rem;
-
-      @include min-width(medium) {
-        width: 18rem;
-      }
-
-      @include min-width(large) {
-        width: 20rem;
-      }
     }
 
     &--subtext {
       font-size: 2.8rem;
       text-transform: uppercase;
       color: $color-primary;
-
-      @include min-width(medium) {
-        font-size: 3.15rem;
-      }
-
-      @include min-width(large) {
-        font-size: 3.5rem;
-      }
     }
   }
 

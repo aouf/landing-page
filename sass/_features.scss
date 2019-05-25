@@ -31,11 +31,6 @@
 
     @include min-width(medium) {
       grid-column: 1 / 2;
-      grid-gap: 4.5rem;
-    }
-
-    @include min-width(large) {
-      grid-gap: 5rem;
     }
   }
 
@@ -53,13 +48,8 @@
 
     @include min-width(medium) {
       grid-column: 2 / 3;
-      font-size: 1.6875rem;
       text-align: start;
       grid-row-gap: 3rem;
-    }
-
-    @include min-width(large) {
-      font-size: 1.875rem;
     }
 
     &--intro {
@@ -74,14 +64,6 @@
   grid-gap: 0.8rem;
   justify-items: center;
 
-  @include min-width(medium) {
-    grid-gap: 0.9rem;
-  }
-
-  @include min-width(large) {
-    grid-gap: 1rem;
-  }
-
   &__icon {
     height: 8rem;
     width: 8rem;
@@ -89,29 +71,11 @@
     background-color: #fff;
     border-radius: 50%;
     fill: $color-primary;
-
-    @include min-width(medium) {
-      height: 9rem;
-      width: 9rem;
-    }
-
-    @include min-width(large) {
-      height: 10rem;
-      width: 10rem;
-    }
   }
 
   &__description {
     color: #fff;
     font-size: 1.5rem;
     text-align: center;
-
-    @include min-width(medium) {
-      font-size: 1.6875rem;
-    }
-
-    @include min-width(large) {
-      font-size: 1.875rem;
-    }
   }
 }
