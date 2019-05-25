@@ -7,14 +7,4 @@
   &:not(:last-child) {
     margin-bottom: 1rem;
   }
-
-  @include min-width(medium) {
-    font-size: 1.6875rem;
-    line-height: 2.34rem;
-  }
-
-  @include min-width(large) {
-    font-size: 1.875rem;
-    line-height: 2.6rem;
-  }
 }
