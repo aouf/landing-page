@@ -173,7 +173,8 @@ body {
     justify-self: end;
     height: 8rem;
     width: 8rem;
-    fill: #fff; }
+    fill: #fff;
+    margin: -2rem 0; }
     @media only screen and (min-width: 31.25em) {
       .footer__contact-icon {
         grid-row: 1 / 3;
