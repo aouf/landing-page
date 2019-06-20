@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "devserver": "live-server --browser=firefox-developer-edition",
+    "devserver": "live-server --browser=firefox-developer-edition --cors",
     "start": "npm-run-all --parallel devserver watch:sass",
     "compress:html": "mv index.html index.max.html && html-minifier --collapse-whitespace --remove-comments index.max.html -o index.html",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
