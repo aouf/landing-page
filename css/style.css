@@ -129,18 +129,31 @@ body {
   .follow__social {
     background-color: #fd7c66;
     display: grid;
-    grid-template-columns: max-content;
+    grid-template-columns: repeat(2, max-content);
     grid-row-gap: 1rem;
     justify-content: center;
     justify-items: center;
     padding: 3rem; }
   .follow__text {
     color: #fff;
-    text-transform: uppercase; }
-  .follow__icon {
+    text-transform: uppercase;
+    grid-column: 1 / 3; }
+  .follow__icon-facebook {
     fill: #fff;
     height: 6rem;
     width: 6rem; }
+  .follow__link-twitter {
+    height: 6rem;
+    width: 6rem;
+    background-color: #fff;
+    border-radius: 100px;
+    display: grid; }
+  .follow__icon-twitter {
+    height: 4rem;
+    width: 4rem;
+    fill: #fd7c66;
+    align-self: center;
+    justify-self: center; }
   .follow__newsletter {
     background-color: #5be79b;
     display: grid;

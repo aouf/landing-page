@@ -145,9 +145,18 @@
       <div class="follow__social">
         <p class="follow__text">Nous suivre sur les réseaux</p>
 
-        <a href="https://www.facebook.com/aoufmarseille/" class="follow__link">
-          <svg class="follow__icon">
+        <a
+          href="https://www.facebook.com/aoufmarseille/"
+          class="follow__link-facebook"
+        >
+          <svg class="follow__icon-facebook">
             <use xlink:href="img/sprite.svg#facebook"></use>
+          </svg>
+        </a>
+
+        <a href="https://twitter.com/aouf_asso" class="follow__link-twitter">
+          <svg class="follow__icon-twitter">
+            <use xlink:href="img/sprite.svg#twitter"></use>
           </svg>
         </a>
       </div>
@@ -198,21 +207,6 @@
         Nous contacter
       </a>
     </footer>
-    <script>
-      "use strict";
-      var appPreview = document.getElementById("app-preview"),
-        previewIsLoaded = !1;
-      function loadPreview() {
-        500 <= window.innerWidth &&
-          (appPreview.setAttribute(
-            "srcset",
-            appPreview.getAttribute("data-srcset")
-          ),
-          appPreview.setAttribute("src", appPreview.getAttribute("data-src")),
-          (previewIsLoaded = !0));
-      }
-      (window.onload = loadPreview),
-        (window.onresize = previewIsLoaded ? null : loadPreview);
-    </script>
+    <script src="js/index.js"></script>
   </body>
 </html>

@@ -1,17 +1,17 @@
 {
   "name": "landing-page",
   "version": "1.0.0",
-  "description": "Version beta de la landing page de Aouf",
+  "description": "Landing page de Aouf",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server --browser=firefox-developer-edition",
     "start": "npm-run-all --parallel devserver watch:sass",
-    "compress:html": "mv index.html index.max.html && html-minifier --collapse-whitespace --remove-comments --minify-js true index.max.html -o index.html",
+    "compress:html": "mv index.html index.max.html && html-minifier --collapse-whitespace --remove-comments index.max.html -o index.html",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css && rm -f css/style.comp.css css/style.prefix.css",
     "build:all": "npm-run-all --parallel compress:html build:css"
   },
   "repository": {
@@ -26,7 +26,7 @@
   "homepage": "https://github.com/aouf/landing-page#readme",
   "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^9.5.1",
+    "autoprefixer": "^9.6.0",
     "html-minifier": "^4.0.0",
     "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.5",

@@ -14,7 +14,7 @@
     background-color: $color-secondary;
 
     display: grid;
-    grid-template-columns: max-content;
+    grid-template-columns: repeat(2, max-content);
     grid-row-gap: 1rem;
     justify-content: center;
     justify-items: center;
@@ -24,12 +24,32 @@
   &__text {
     color: #fff;
     text-transform: uppercase;
+    grid-column: 1 / 3;
   }
 
-  &__icon {
+  &__icon-facebook {
     fill: #fff;
     height: 6rem;
     width: 6rem;
+  }
+
+  &__link-twitter {
+    height: 6rem;
+    width: 6rem;
+
+    background-color: #fff;
+    border-radius: 100px;
+
+    display: grid;
+  }
+
+  &__icon-twitter {
+    height: 4rem;
+    width: 4rem;
+    fill: $color-secondary;
+
+    align-self: center;
+    justify-self: center;
   }
 
   &__newsletter {
