@@ -119,7 +119,7 @@ body {
     text-align: center; }
 
 .follow {
-  grid-row: 4 / 5;
+  grid-row: 5 / 6;
   display: grid;
   font-size: 1.6rem;
   font-weight: 700; }
@@ -135,17 +135,17 @@ body {
     justify-items: center;
     padding: 3rem; }
   .follow__text {
-    color: #fff;
+    color: #122b33;
     text-transform: uppercase;
     grid-column: 1 / 3; }
   .follow__icon-facebook {
-    fill: #fff;
+    fill: #122b33;
     height: 6rem;
     width: 6rem; }
   .follow__link-twitter {
     height: 6rem;
     width: 6rem;
-    background-color: #fff;
+    background-color: #122b33;
     border-radius: 100px;
     display: grid; }
   .follow__icon-twitter {
@@ -169,11 +169,11 @@ body {
       .follow__newsletter {
         grid-template-columns: max-content min-content; } }
   .follow__label {
-    color: #fff;
+    color: #122b33;
     text-transform: uppercase;
     grid-column: 1 / 3; }
   .follow__email {
-    background-color: #fff;
+    background-color: #122b33;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 0.6rem;
@@ -185,7 +185,7 @@ body {
       color: #5be79b; }
   .follow__validation {
     color: #5be79b;
-    background-color: #fff;
+    background-color: #122b33;
     border: none;
     font-size: inherit;
     font-weight: inherit;
@@ -197,7 +197,7 @@ body {
       transform: scale(1.1); }
 
 .footer {
-  grid-row: 5 / 6;
+  grid-row: 6 / 7;
   background-color: #122b33;
   padding: 3rem 10%;
   display: grid;
@@ -291,6 +291,16 @@ body {
     grid-row: 4 / 5;
     justify-self: start;
     align-self: start; }
+
+.help {
+  grid-row: 4 / 5;
+  background-color: #122b33;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  padding: 0 10%; }
+  .help__title {
+    text-transform: uppercase;
+    color: #fff; }
 
 .presentation {
   grid-row: 2 / 3;

@@ -1,0 +1,23 @@
+.help {
+  grid-row: 4 / 5;
+
+  background-color: $color-primary;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  padding: 0 10%;
+
+  &__category {
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &__image {
+  }
+
+  &__text {
+  }
+}

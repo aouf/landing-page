@@ -13,10 +13,10 @@ window.onresize = previewIsLoaded ? null : loadPreview;
 
 // Post newsletter form data to Mailchimp
 const newsletterForm = document.getElementById("newsletter-form");
-newsletterForm.addEventListener("submit", e => {
+newsletterForm.addEventListener("submit", function(e) {
   e.preventDefault();
 
-  const formData = new FormData(newsletterForm);
+  const formData = new FormData(this);
   const searchParams = new URLSearchParams();
 
   for (const pair of formData) {
