@@ -4,14 +4,20 @@
   background-color: $color-primary;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  padding: 0 10%;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  grid-column-gap: 4rem;
+  justify-items: center;
+  padding: 4.5rem 10%;
 
   &__category {
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    align-items: start;
+    grid-row-gap: 1rem;
   }
 
-  &__title {
-    text-transform: uppercase;
+  &__heading {
     color: #fff;
   }
 
@@ -19,5 +25,7 @@
   }
 
   &__text {
+    color: #fff;
+    text-align: center;
   }
 }

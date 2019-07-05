@@ -91,3 +91,35 @@ body {
     padding: 1.25rem 2.5rem;
   }
 }
+
+// CTA
+.btn:link,
+.btn:visited {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-primary;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  transition: all 0.1s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    // transform: translateY(0);
+  }
+
+  @include min-width(medium) {
+    font-size: 1.8rem;
+    padding: 1.125rem 2.25rem;
+  }
+
+  @include min-width(large) {
+    font-size: 2rem;
+    padding: 1.25rem 2.5rem;
+  }
+}

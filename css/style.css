@@ -51,12 +51,45 @@ body {
       font-size: 2rem;
       padding: 1.25rem 2.5rem; } }
 
+.btn:link,
+.btn:visited {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #122b33;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  transition: all 0.1s; }
+  .btn:link:hover,
+  .btn:visited:hover {
+    transform: scale(1.05); }
+  @media only screen and (min-width: 56.25em) {
+    .btn:link,
+    .btn:visited {
+      font-size: 1.8rem;
+      padding: 1.125rem 2.25rem; } }
+  @media only screen and (min-width: 112.5em) {
+    .btn:link,
+    .btn:visited {
+      font-size: 2rem;
+      padding: 1.25rem 2.5rem; } }
+
 .paragraph {
   color: #122b33;
   font-size: 1.5rem;
   line-height: 2rem; }
   .paragraph:not(:last-child) {
     margin-bottom: 1rem; }
+
+.heading-1 {
+  font-size: 2.8rem;
+  text-transform: uppercase; }
+
+.heading-2 {
+  font-size: 2rem;
+  text-transform: uppercase; }
 
 .features {
   grid-row: 3 / 4;
@@ -194,7 +227,7 @@ body {
     cursor: pointer;
     transition: all 0.1s; }
     .follow__validation:hover {
-      transform: scale(1.1); }
+      transform: scale(1.05); }
 
 .footer {
   grid-row: 6 / 7;
@@ -283,8 +316,6 @@ body {
     .header__heading--logo {
       width: 16rem; }
     .header__heading--subtext {
-      font-size: 2.8rem;
-      text-transform: uppercase;
       color: #122b33; }
   .header__cta {
     grid-column: 3 / 4;
@@ -296,11 +327,21 @@ body {
   grid-row: 4 / 5;
   background-color: #122b33;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  padding: 0 10%; }
-  .help__title {
-    text-transform: uppercase;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  grid-column-gap: 4rem;
+  justify-items: center;
+  padding: 4.5rem 10%; }
+  .help__category {
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    align-items: start;
+    grid-row-gap: 1rem; }
+  .help__heading {
     color: #fff; }
+  .help__text {
+    color: #fff;
+    text-align: center; }
 
 .presentation {
   grid-row: 2 / 3;
