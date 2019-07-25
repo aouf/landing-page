@@ -28,6 +28,11 @@ $font-primary: "Montserrat", sans-serif;
   }
 }
 
+// UTILITIES
+.u-no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
 // BASE CSS
 *,
 *::before,
